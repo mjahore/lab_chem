@@ -60,7 +60,9 @@ while 1:
 		unit = default_row[11]
 
 	# Update values in row.
-	default_row[4]  = chemical
+	default_row[3] = chem_st
+	default_row[4] = cirpy.resolve(cas, 'iupac_name')
+	#default_row[4]  = chemical
 	default_row[7]  = stor_loc
 	default_row[8]  = stor_dev
 	default_row[9]  = num_con
