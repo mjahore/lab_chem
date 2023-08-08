@@ -36,10 +36,24 @@ while 1:
 	cas = my_cas[int(cas_id)]
 
 	stor_loc = input('Storage location: ')
+	if stor_loc == '':
+		stor_loc = default_row[7]
+
 	stor_dev = input('Storage device: ')
+	if stor_dev == '':
+		stor_dev = default_row[8]
+
 	num_con  = input('Num. containers: ')
+	if num_con == '':
+		num_con = '1'
+
 	quant    = input('Amount: ')
+	if quant == '':
+		quant = default_row[10]
+
 	unit     = input('Unit (mL, g, etc.): ')
+	if unit == '':
+		unit = default_row[11]
 
 	# Update values in row.
 	default_row[4]  = chemical
