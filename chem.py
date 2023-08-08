@@ -17,7 +17,7 @@ file = open('chem.csv', 'a', newline='')
 writer = csv.writer(file)
 
 # Fields that will change: 4 (chemical name), 7 (storage location), 8 (storage device), 9 (num. containers), 10 (amt), 11 (unit), 12 (CAS #)
-default_row = ['', PI_LastName, PI_FirstName, 'Liquid', 'default', PI_Bldg, PI_Lab, 'default', 'default', 'default', 'default', 'default', 'default']
+default_row = ['', PI_LastName, PI_FirstName, 'default', 'default', PI_Bldg, PI_Lab, 'default', 'default', 'default', 'default', 'default', 'default']
 
 # Loop until end of universe.
 while 1:
@@ -34,6 +34,10 @@ while 1:
 
 	cas_id = input('Choose CAS: ')
 	cas = my_cas[int(cas_id)]
+
+	chem_st  = input('Form: ')
+	if chem_st == '':
+ 		chem_st = default_row[3]
 
 	stor_loc = input('Storage location: ')
 	if stor_loc == '':
